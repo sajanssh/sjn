@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="window.location.href='product_form.html'">Add New Product</button>
+        </div>
+        <h1>Saved Products</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Products">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <div id="productList" class="product-list"></div>
+    </div>
+
+    <!-- Success Popup Modal -->
+    <div id="successPopup" class="popup-modal" style="display: none;">
+        <div class="popup-content">
+            <p>Product added/updated successfully!</p>
+            <button onclick="closePopup()">OKAY</button>
+        </div>
+    </div>
+
+    <!-- Edit Popup Modal -->
+    <div id="editPopup" class="popup-modal" style="display: none;">
+        <div class="popup-content">
+            <h2>Edit Product</h2>
+            <form id="editForm">
+                <input type="text" id="editProductName" placeholder="Product Name" required>
+                <input type="number" id="editSellingPrice" placeholder="Selling Price" required>
+                <input type="number" id="editCostPrice" placeholder="Cost Price" required>
+                <input type="number" id="editWholesalePrice" placeholder="Wholesale Price" required>
+                <input type="number" id="editQuantity" placeholder="Quantity" required>
+                <input type="file" id="editProductImage" accept="image/*">
+                <button type="submit">Save Changes</button>
+            </form>
+            <button onclick="closeEditPopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

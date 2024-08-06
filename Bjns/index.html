@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <button onclick="window.location.href='saved_products.html'">Saved Products</button>
+        </div>
+        <h1>Add New Product</h1>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="number" id="sellingPrice" placeholder="Selling Price (Rs)" required>
+            <input type="number" id="costPrice" placeholder="Cost Price (Rs)" required>
+            <input type="number" id="wholesalePrice" placeholder="Wholesale Price (Rs)" required>
+            <input type="number" id="quantity" placeholder="Quantity" required>
+            <input type="file" id="productImage" accept="image/*">
+            <button type="submit" id="formButton">Add Product</button>
+        </form>
+    </div>
+    <!-- Success Popup Modal -->
+    <div id="successPopup" class="popup-modal" style="display: none;">
+        <div class="popup-content">
+            <p>Product added successfully!</p>
+            <button onclick="closePopup()">OKAY</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
